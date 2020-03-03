@@ -2,14 +2,13 @@
 
 import csv
 
+all_notices = []
 
-# *** Generate food dictionary *****
-# open file
-notices = open('todays_notices.csv')
+with open('todays_notices.csv', 'r') as file:
+    reader = csv.reader(file)
+    for row in reader:
+        all_notices.append(row)
 
-# Read data into a list
-csv_notices = csv.reader(notices)
-
-for row in notices:
-    print(row)
-
+print()
+print()
+print(all_notices)
