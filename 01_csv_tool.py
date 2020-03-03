@@ -11,4 +11,7 @@ with open('todays_notices.csv', 'r') as file:
 
 print()
 print()
-print(all_notices)
+for item in all_notices:
+    print(item[0])
+    print(item[1])
+    print()
